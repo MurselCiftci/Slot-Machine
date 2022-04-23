@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Slot_Machine
 {
@@ -26,6 +27,35 @@ namespace Slot_Machine
             };
 
             Random rand = new Random();
+
+            var firstRowList = new List<int>();
+            firstRowList.Add(rand.Next(0, 9));
+            firstRowList.Add(rand.Next(0, 9));
+            firstRowList.Add(rand.Next(0, 9));
+
+            var secondRowList = new List<int>();
+            secondRowList.Add(rand.Next(0, 9));
+            secondRowList.Add(rand.Next(0, 9));
+            secondRowList.Add(rand.Next(0, 9));
+
+            var thirdRowList = new List<int>();
+            thirdRowList.Add(rand.Next(0, 9));
+            thirdRowList.Add(rand.Next(0, 9));
+            thirdRowList.Add(rand.Next(0, 9));
+
+            Console.WriteLine(string.Join(" ", firstRowList));
+            Console.WriteLine(string.Join(" ", secondRowList));
+            Console.WriteLine(string.Join(" ", thirdRowList));
+
+
+
+
+
+
+
+
+
+
 
             // Console.WriteLine(slotMachineNumbers[0, 0, 1]);
 
@@ -65,7 +95,7 @@ namespace Slot_Machine
                 
             }
             */
-        
+
         }
     }
 }
