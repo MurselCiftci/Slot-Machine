@@ -27,17 +27,29 @@ namespace Slot_Machine
 
             Random rand = new Random();
 
+            // Console.WriteLine(slotMachineNumbers[0, 0, 1]);
+
+            // Console.WriteLine(slotMachineNumbers[0 , 0, rand.Next(slotMachineNumbers.GetLength(0))]);
+
+            // int firstRow = slotMachineNumbers[rand.Next(slotMachineNumbers.GetLength(0)), rand.Next(slotMachineNumbers.GetLength(1)), rand.Next(slotMachineNumbers.GetLength(2))];
+
+            /*
             for (int i = 0; i < slotMachineNumbers.GetLength(0); i++)
             {
                 for (int j = 0; j < slotMachineNumbers.GetLength(1); j++)
                 {
                     for (int k = 0; k < slotMachineNumbers.GetLength(2); k++)
                     {
-                        Console.WriteLine(slotMachineNumbers[i, j, k]);
-                    }
-                }
-            }
+                        int firstRow = rand.Next(0, slotMachineNumbers.Length);
+                        
+                        Console.WriteLine(slotMachineNumbers[i, j, k] + " ");
 
+                    }
+                    Console.WriteLine();
+                }
+                
+            }
+            */
         }
     }
 }
