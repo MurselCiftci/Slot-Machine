@@ -33,6 +33,21 @@ namespace Slot_Machine
 
             // int firstRow = slotMachineNumbers[rand.Next(slotMachineNumbers.GetLength(0)), rand.Next(slotMachineNumbers.GetLength(1)), rand.Next(slotMachineNumbers.GetLength(2))];
 
+
+            /*
+            for (int i = 0; i < slotMachineNumbers.GetLength(0); i++)
+            {
+                for (int j = 0; j < slotMachineNumbers.GetLength(1); j++)
+                {
+                    
+                    Console.WriteLine(slotMachineNumbers[i, j, rand.Next(0, 9)]);
+                }
+                
+            }
+            */
+
+
+
             /*
             for (int i = 0; i < slotMachineNumbers.GetLength(0); i++)
             {
@@ -50,6 +65,7 @@ namespace Slot_Machine
                 
             }
             */
+        
         }
     }
 }
