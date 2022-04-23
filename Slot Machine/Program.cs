@@ -51,7 +51,29 @@ namespace Slot_Machine
             Console.WriteLine(string.Join(" ", secondRowList));
             Console.WriteLine(string.Join(" ", thirdRowList));
 
-
+            bool checkHorizontalLines()
+            {
+                if (firstRowList[0] == firstRowList[1] && firstRowList[1] == firstRowList[2])
+                {
+                    bool firstRowListMatches = true;
+                    return firstRowListMatches;
+                }
+                if (secondRowList[0] == secondRowList[1] && secondRowList[1] == secondRowList[2])
+                {
+                    bool secondRowListMatches = true;
+                    return secondRowListMatches;
+                }
+                if (thirdRowList[0] == thirdRowList[1] && thirdRowList[1] == thirdRowList[2])
+                {
+                    bool thirdRowListMatches = true;
+                    return thirdRowListMatches;
+                }
+                else
+                {
+                    Console.WriteLine("No luck this time around!");
+                    return false;
+                }
+            }
 
 
 
