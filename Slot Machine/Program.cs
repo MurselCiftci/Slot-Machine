@@ -7,6 +7,9 @@ namespace Slot_Machine
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Warning, seek medical help from a psychologist when becoming addicted to gambling.");
+
+            /*
             var slotMachineNumbers = new int[3, 3, 10]
             {
                 {
@@ -25,6 +28,7 @@ namespace Slot_Machine
                    { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 }
                 }
             };
+            */
 
             Random rand = new Random();
 
