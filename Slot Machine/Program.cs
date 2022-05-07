@@ -17,7 +17,7 @@ namespace Slot_Machine
             gameGrid.Add(firstRowList);
             for (int i = 0; i < 3; i++)
             {
-                gameGrid[0].Add(rand.Next(0, 9));
+                gameGrid[0].Add(0);
             }
 
             var secondRowList = new List<int>();
@@ -44,10 +44,54 @@ namespace Slot_Machine
             Console.WriteLine(string.Join(" ", secondRowList));
             Console.WriteLine(string.Join(" ", thirdRowList));
             
+            // here are the if statements for the horizontal lines of the slot machine to check whether they match
+
+
             if (gameGrid[0][0] == gameGrid[0][1] && gameGrid[0][1] == gameGrid[0][2])
             {
                 Console.WriteLine("Lucky Bastard");
             }
+
+            if (gameGrid[1][0] == gameGrid[1][1] && gameGrid[1][1] == gameGrid[1][2])
+            {
+                Console.WriteLine("Second line lucky bastard");
+            }
+
+            if(gameGrid[2][0] == gameGrid[2][1] && gameGrid[2][1] == gameGrid[2][2])
+            {
+                Console.WriteLine("Second line lucky bastard");
+            }
+
+            // here are the vertical lines of the slot machine to check whether they match
+            if (gameGrid[0][0] == gameGrid[1][0] && gameGrid[1][0] == gameGrid[2][0])
+            {
+                Console.WriteLine("Lucky Bastard");
+            }
+
+            if (gameGrid[0][1] == gameGrid[1][1] && gameGrid[1][1] == gameGrid[2][1])
+            {
+                Console.WriteLine("Second line lucky bastard");
+            }
+
+            if (gameGrid[0][2] == gameGrid[1][2] && gameGrid[2][1] == gameGrid[2][2])
+            {
+                Console.WriteLine("Second line lucky bastard");
+            }
+
+            // here are the horizontal lines
+            if (gameGrid[0][0] == gameGrid[1][1] && gameGrid[1][1] == gameGrid[2][2])
+            {
+                Console.WriteLine("Lucky Bastard");
+            }
+
+            if (gameGrid[0][2] == gameGrid[1][1] && gameGrid[1][1] == gameGrid[2][0])
+            {
+                Console.WriteLine("Second line lucky bastard");
+            }
+
+
+
+
 
             /*
             var slotMachineNumbers = new int[3, 3, 10]
