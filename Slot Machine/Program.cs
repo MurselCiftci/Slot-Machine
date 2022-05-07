@@ -9,6 +9,20 @@ namespace Slot_Machine
         {
             Console.WriteLine("Warning, seek medical help from a psychologist when becoming addicted to gambling.");
 
+            Random rand = new Random();
+
+            List<List<int>> gameGrid = new List<List<int>>();
+
+            gameGrid.Add(firstRowList);
+            gameGrid.Add(secondRowList);
+            gameGrid[0][0] = 5;
+
+            var thirdRowList = new List<int>();
+            for (int i = 0; i < 3; i++)
+            {
+                gameGrid[0].Add(rand.Next(0, 9));
+            }
+
             /*
             var slotMachineNumbers = new int[3, 3, 10]
             {
@@ -29,28 +43,51 @@ namespace Slot_Machine
                 }
             };
             */
+            //var slotMachineNumbers = new int[3, 3]
+            //{
+            //    {0,0,0},
+            //    {
+            //        0,0,0
+            //    },
+            //    {
+            //        0,0,0
+            //    },
+            //};
 
-            Random rand = new Random();
+            //slotMachineNumbers[0,0] =
 
+
+            /* old
             var firstRowList = new List<int>();
             firstRowList.Add(rand.Next(0, 9));
             firstRowList.Add(rand.Next(0, 9));
             firstRowList.Add(rand.Next(0, 9));
+            firstRowList.Add(5);
+            */
 
+            /* old
             var secondRowList = new List<int>();
             secondRowList.Add(rand.Next(0, 9));
             secondRowList.Add(rand.Next(0, 9));
             secondRowList.Add(rand.Next(0, 9));
+            */
 
-            var thirdRowList = new List<int>();
+
+            /*
             thirdRowList.Add(rand.Next(0, 9));
             thirdRowList.Add(rand.Next(0, 9));
             thirdRowList.Add(rand.Next(0, 9));
+            */
+
 
             Console.WriteLine(string.Join(" ", firstRowList));
             Console.WriteLine(string.Join(" ", secondRowList));
             Console.WriteLine(string.Join(" ", thirdRowList));
 
+
+
+
+            /*
             bool checkHorizontalLines()
             {
                 if (firstRowList[0] == firstRowList[1] && firstRowList[1] == firstRowList[2])
@@ -74,10 +111,7 @@ namespace Slot_Machine
                     return false;
                 }
             }
-
-
-
-
+            */
 
 
 
