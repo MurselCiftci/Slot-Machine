@@ -13,14 +13,40 @@ namespace Slot_Machine
 
             List<List<int>> gameGrid = new List<List<int>>();
 
+            var firstRowList = new List<int>();
             gameGrid.Add(firstRowList);
-            gameGrid.Add(secondRowList);
-            gameGrid[0][0] = 5;
-
-            var thirdRowList = new List<int>();
             for (int i = 0; i < 3; i++)
             {
                 gameGrid[0].Add(rand.Next(0, 9));
+            }
+
+            var secondRowList = new List<int>();
+            gameGrid.Add(secondRowList);
+            for (int i = 0; i < 3; i++)
+            {
+                gameGrid[1].Add(rand.Next(0, 9));
+            }
+
+
+            var thirdRowList = new List<int>();
+            gameGrid.Add(thirdRowList);
+
+            for (int i = 0; i < 3; i++)
+            {
+                gameGrid[2].Add(rand.Next(0, 9));
+            }
+            
+            /*       
+            gameGrid[0][0] = 5;
+            */
+
+            Console.WriteLine(string.Join(" ", firstRowList));
+            Console.WriteLine(string.Join(" ", secondRowList));
+            Console.WriteLine(string.Join(" ", thirdRowList));
+            
+            if (gameGrid[0][0] == gameGrid[0][1] && gameGrid[0][1] == gameGrid[0][2])
+            {
+                Console.WriteLine("Lucky Bastard");
             }
 
             /*
@@ -80,9 +106,6 @@ namespace Slot_Machine
             */
 
 
-            Console.WriteLine(string.Join(" ", firstRowList));
-            Console.WriteLine(string.Join(" ", secondRowList));
-            Console.WriteLine(string.Join(" ", thirdRowList));
 
 
 
