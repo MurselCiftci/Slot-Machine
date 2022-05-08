@@ -10,7 +10,8 @@ namespace Slot_Machine
             Console.WriteLine("Warning, seek medical help from a psychologist when becoming addicted to gambling.");
 
             int gamblerBalance = 5;
-            int gambleAmountWon = 0; 
+            int gambleAmountWon = 0;
+            bool gameWon = false; 
 
             Console.WriteLine($"Your balance is {gamblerBalance}, for how much do you want to play?");
             int playingAmount = int.Parse(Console.ReadLine());
@@ -69,18 +70,21 @@ namespace Slot_Machine
                 // first row horizontal line check
                 if (gameGrid[0][0] == gameGrid[0][1] && gameGrid[0][1] == gameGrid[0][2])
                 {
+                    gameWon = true;
                     Console.WriteLine("Lucky Bastard");
                 }
 
                 // second row horizontal line check
                 if (gameGrid[1][0] == gameGrid[1][1] && gameGrid[1][1] == gameGrid[1][2])
                 {
+                    gameWon = true;
                     Console.WriteLine("Second line lucky bastard");
                 }
 
                 // third row horizontal line check
                 if (gameGrid[2][0] == gameGrid[2][1] && gameGrid[2][1] == gameGrid[2][2])
                 {
+                    gameWon = true;
                     Console.WriteLine("Second line lucky bastard");
                 }
             }
@@ -91,18 +95,21 @@ namespace Slot_Machine
                 // first vertical line check
                 if (gameGrid[0][0] == gameGrid[1][0] && gameGrid[1][0] == gameGrid[2][0])
                 {
+                    gameWon = true;
                     Console.WriteLine("Lucky Bastard");
                 }
 
                 // second vertical line check
                 if (gameGrid[0][1] == gameGrid[1][1] && gameGrid[1][1] == gameGrid[2][1])
                 {
+                    gameWon = true;
                     Console.WriteLine("Second line lucky bastard");
                 }
 
                 // third vertical line check
                 if (gameGrid[0][2] == gameGrid[1][2] && gameGrid[2][1] == gameGrid[2][2])
                 {
+                    gameWon = true;
                     Console.WriteLine("Second line lucky bastard");
                 }
             }
@@ -113,16 +120,27 @@ namespace Slot_Machine
                 // diagonal line check top left to bottom right 
                 if (gameGrid[0][0] == gameGrid[1][1] && gameGrid[1][1] == gameGrid[2][2])
                 {
+                    gameWon = true;
                     Console.WriteLine("Lucky Bastard");
                 }
 
                 // diagonal line check top right to bottom left
                 if (gameGrid[0][2] == gameGrid[1][1] && gameGrid[1][1] == gameGrid[2][0])
                 {
+                    gameWon = true;
                     Console.WriteLine("Second line lucky bastard");
                 }
             }
-
+            
+            if (gameWon == true)
+            {
+                Console.WriteLine("You have a winning combination!");
+                gamblerBalance = gamblerBalance + playingAmount * 2;
+            }
+            else
+            {
+                gamblerBalance = gamblerBalance - playingAmount; 
+            }
             
 
         }
