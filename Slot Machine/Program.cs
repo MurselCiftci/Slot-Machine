@@ -21,6 +21,8 @@ namespace Slot_Machine
             Console.WriteLine("For all diagonal lines enter 3");
             int playingMethod = int.Parse(Console.ReadLine());
 
+
+
             Random rand = new Random();
 
             List<List<int>> gameGrid = new List<List<int>>();
@@ -61,56 +63,64 @@ namespace Slot_Machine
             
             // here are the if statements for the horizontal lines of the slot machine to check whether they match
 
-            // first row horizontal line check
-            if (gameGrid[0][0] == gameGrid[0][1] && gameGrid[0][1] == gameGrid[0][2])
+            
+            if (playingMethod == 1)
             {
-                Console.WriteLine("Lucky Bastard");
-            }
+                // first row horizontal line check
+                if (gameGrid[0][0] == gameGrid[0][1] && gameGrid[0][1] == gameGrid[0][2])
+                {
+                    Console.WriteLine("Lucky Bastard");
+                }
 
-            // second row horizontal line check
-            if (gameGrid[1][0] == gameGrid[1][1] && gameGrid[1][1] == gameGrid[1][2])
-            {
-                Console.WriteLine("Second line lucky bastard");
-            }
+                // second row horizontal line check
+                if (gameGrid[1][0] == gameGrid[1][1] && gameGrid[1][1] == gameGrid[1][2])
+                {
+                    Console.WriteLine("Second line lucky bastard");
+                }
 
-            // third row horizontal line check
-            if (gameGrid[2][0] == gameGrid[2][1] && gameGrid[2][1] == gameGrid[2][2])
-            {
-                Console.WriteLine("Second line lucky bastard");
+                // third row horizontal line check
+                if (gameGrid[2][0] == gameGrid[2][1] && gameGrid[2][1] == gameGrid[2][2])
+                {
+                    Console.WriteLine("Second line lucky bastard");
+                }
             }
 
             // here are the vertical lines of the slot machine to check whether they match
-
-            // first vertical line check
-            if (gameGrid[0][0] == gameGrid[1][0] && gameGrid[1][0] == gameGrid[2][0])
+            if (playingMethod == 2)
             {
-                Console.WriteLine("Lucky Bastard");
-            }
+                // first vertical line check
+                if (gameGrid[0][0] == gameGrid[1][0] && gameGrid[1][0] == gameGrid[2][0])
+                {
+                    Console.WriteLine("Lucky Bastard");
+                }
 
-            // second vertical line check
-            if (gameGrid[0][1] == gameGrid[1][1] && gameGrid[1][1] == gameGrid[2][1])
-            {
-                Console.WriteLine("Second line lucky bastard");
-            }
+                // second vertical line check
+                if (gameGrid[0][1] == gameGrid[1][1] && gameGrid[1][1] == gameGrid[2][1])
+                {
+                    Console.WriteLine("Second line lucky bastard");
+                }
 
-            // third vertical line check
-            if (gameGrid[0][2] == gameGrid[1][2] && gameGrid[2][1] == gameGrid[2][2])
-            {
-                Console.WriteLine("Second line lucky bastard");
+                // third vertical line check
+                if (gameGrid[0][2] == gameGrid[1][2] && gameGrid[2][1] == gameGrid[2][2])
+                {
+                    Console.WriteLine("Second line lucky bastard");
+                }
             }
 
             // here are the horizontal lines
-
-            // diagonal line check top left to bottom right
-            if (gameGrid[0][0] == gameGrid[1][1] && gameGrid[1][1] == gameGrid[2][2])
+            if (playingMethod == 3)
             {
-                Console.WriteLine("Lucky Bastard");
-            }
+                // diagonal line check top left to bottom right 
+                if (gameGrid[0][0] == gameGrid[1][1] && gameGrid[1][1] == gameGrid[2][2])
+                {
+                    Console.WriteLine("Lucky Bastard");
+                }
 
-            // diagonal line check top right to bottom left
-            if (gameGrid[0][2] == gameGrid[1][1] && gameGrid[1][1] == gameGrid[2][0])
-            {
-                Console.WriteLine("Second line lucky bastard");
+                // diagonal line check top right to bottom left
+                if (gameGrid[0][2] == gameGrid[1][1] && gameGrid[1][1] == gameGrid[2][0])
+                {
+                    Console.WriteLine("Second line lucky bastard");
+                }
             }
 
             
