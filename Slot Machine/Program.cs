@@ -65,6 +65,19 @@ namespace Slot_Machine
             // here are the if statements for the horizontal lines of the slot machine to check whether they match
 
             
+            for (int i = 0; i < gameGrid.Count; i++)
+            {
+                for (int j = 0; j < gameGrid[i].Count; j++)
+                {
+                   if (gameGrid[i][j] == gameGrid[i][j++])
+                    {
+                        Console.WriteLine("True");
+                    }
+                }
+            }
+
+
+
             if (playingMethod == 1)
             {
                 // first row horizontal line check
